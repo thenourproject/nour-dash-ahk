@@ -11,8 +11,6 @@ EarlyExit = 0
 WelcomeVar =
 (
 Daemon is now running in Standalone mode
-View Readme.md to understand how to run from console
-
 192.168.2.105
 )
 
@@ -62,22 +60,12 @@ presetstart:
 	PingResults:="PingResults" . Computername . ".txt"
 	Comment = "debug comment"
 
-	WinHTTP := ComObjCreate("WinHTTP.WinHttpRequest.5.1")
-	;~ WinHTTP.SetProxy(0)
-	WinHTTP.Open("POST", "https://maker.ifttt.com/trigger/nour-button_pressed/with/key/cYwSzBWAgp-JGkrllx_RAn", 0)
-	WinHTTP.SetRequestHeader("Content-Type", "application/json")
-	Body := "{}"
-	WinHTTP.Send(Body)
-	Result := WinHTTP.ResponseText
-	Status := WinHTTP.Status
-	;msgbox % "status: " status "`n`nresult: " result
-
-
 Goto StartDaemon
 
 StartDaemon:
 	PingResults:="PingResults" . Computername . ".txt"
-	menu, tray, tip,%A_ScriptName% `nFor button at:           %Computername%`nRunning program:   %ptorun%`nComment:                %Comment%
+	menu, tray, tip, %A_ScriptName%
+	Menu, Tray, Icon, favicon.ico
 Checkcomp:
 	gosub CheckCompison
 	;run %ptorun%
@@ -171,7 +159,7 @@ if EarlyExit = 1
 	}
 if A_ExitReason not in Logoff,Shutdown  ; Avoid spaces around the comma in this line.
 {
-    MsgBox, 4, , Are you sure you want to close the daemon monitoring button at `n%ComputerName%?`n`nSet to run program at:`n%ptorun%`n`nComment: %Comment%
+    MsgBox, 4, , Are you sure you want to close the daemon monitoring button?
     IfMsgBox, No
         return
 }
