@@ -10,7 +10,7 @@ Modified version to call IFTTT API with no configuration.
 
 * Amazon Dash Button connected to Wifi (follow instructions [here](http://www.instructables.com/id/Amazon-Dash-Button-Hack/))  
 * Class C subnet  (If you don't know what this is, don't worry about it)*
-*Preferably a reserved DHCP IP for the button  (If you don't know what this is, you may need to rerun the Discovery program from time to time)
+* Preferably a reserved DHCP IP for the button  (If you don't know what this is, you may need to rerun the Discovery program from time to time)
 
 #License
 
