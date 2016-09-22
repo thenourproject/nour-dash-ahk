@@ -1,5 +1,5 @@
 # nour-dash-ahk
 
-Based on https://github.com/fiveseven808/AmazonDashButtonHack base (Autohotkey)
+Based on [AmazonDashButtonHack](https://github.com/fiveseven808/AmazonDashButtonHack) (Autohotkey)
 
-Modified version to call IFTTT API.
+Modified version to call IFTTT API with no configuration.
