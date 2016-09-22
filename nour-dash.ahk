@@ -65,7 +65,6 @@ Goto StartDaemon
 StartDaemon:
 	PingResults:="PingResults" . Computername . ".txt"
 	menu, tray, tip, %A_ScriptName%
-	Menu, Tray, Icon, favicon.ico
 Checkcomp:
 	gosub CheckCompison
 	;run %ptorun%
